@@ -7,6 +7,11 @@
                 The dump has a custom format (as exported from Info Space) and is enclosed in a sequence file.</description>
         </property>
         <property>
+            <name>approved_columnfamilies_csv</name>
+            <value>project,organization,result,resultProject_outcome_isProducedBy,resultResult_dedup_merges,projectOrganization_participation_hasParticipant</value>
+            <description>list of approved collumn families, others will not be processed</description>
+        </property>
+        <property>
             <name>inference_provenance_blacklist</name>
             <value>iis</value>
             <description>list of blacklisted inference provenance which sould not be taken into account by importer, skipped when set to $UNDEFINED$</description>
@@ -187,7 +192,7 @@
                 <!-- # Job-specific options -->
                 <property>
                     <name>import.approved.columnfamilies.csv</name>
-                    <value>project,organization,result,resultProject_outcome_isProducedBy,resultResult_dedup_merges,projectOrganization_participation_hasParticipant</value>
+                    <value>${approved_columnfamilies_csv}</value>
                 </property>
                 <property>
                     <name>import.inference.provenance.blacklist</name>
